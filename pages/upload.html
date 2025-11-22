@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload – MediaHUB</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../css/upload.css">
+</head>
+
+<body onload="requireAuth()">
+
+<div class="navbar">
+    <span class="logo">MediaHUB</span>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="upload.html" class="active">Upload</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+
+<div class="upload-container">
+    <h2>Upload File</h2>
+
+    <input type="file" id="fileInput" />
+
+    <button onclick="uploadFile()">Upload</button>
+
+    <p id="status"></p>
+</div>
+
+<script src="../js/utils.js"></script>
+<script src="../js/upload.js"></script>
+<script src="../js/auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+/* ============================
+   PAGE TITLE
+   ============================ */
+.page-title {
+    margin: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* ============================
+   MEDIA GRID
+   ============================ */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+.item {
+    width: 200px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.thumb {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 6px;
+    background: #eaeaea;
+}
+
+.file-type {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #333;
+}

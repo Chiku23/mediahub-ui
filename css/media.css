@@ -1,0 +1,39 @@
+.container {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.preview-box {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.preview-box img,
+.preview-box video,
+.preview-box audio {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.meta-box {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    font-size: 14px;
+}
+
+.back-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background: #005fcc;
+}

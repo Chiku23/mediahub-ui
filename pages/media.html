@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Details – MediaHUB</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
+</head>
+
+<body onload="loadDetails()">
+
+<div class="navbar">
+    <span class="logo">MediaHUB</span>
+    <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="upload.html">Upload</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Media Details</h2>
+    
+    <div id="preview" class="preview-box"></div>
+    <div id="metadata" class="meta-box"></div>
+
+    <button class="back-btn" onclick="window.history.back()">Back</button>
+</div>
+
+<script src="../js/utils.js"></script>
+<script src="../js/media-details.js"></script>
+<script src="../js/auth.js"></script>
+
+</body>
+</html>

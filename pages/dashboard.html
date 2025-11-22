@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - MediaHUB</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body onload="loadMedia()">
+
+<div class="navbar">
+    <span class="logo">MediaHUB</span>
+    <div class="nav-links">
+        <span id="username"></span>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="upload.html">Upload</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+
+<h2 class="page-title">Your Media</h2>
+
+<div id="media-grid" class="grid"></div>
+
+<script src="../js/utils.js"></script>
+<script src="../js/media.js"></script>
+<script src="../js/auth.js"></script>
+</body>
+</html>

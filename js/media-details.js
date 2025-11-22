@@ -66,3 +66,27 @@ async function loadMetadata(id) {
         <p><strong>Created:</strong> ${new Date(file.createdAt).toLocaleString()}</p>
     `;
 }
+
+async function regenerateThumbnail(){
+    const params = new URLSearchParams(window.location.search);
+    let mediafileID = params.get("id");
+
+    try {
+        const res = await fetch(`${API.thumbnail}/thumbnail`, {
+            method: "POST",
+            headers: { Authorization: "Bearer " + getToken(), "Content-Type": "application/json" },
+            
+            body: JSON.stringify({mediafileID})
+        });
+
+        const data = await res.json();
+
+        if(data.message){
+            alert(data.message);
+        }else{
+            console.error(data.error || "Error generating thumbnail");
+        }
+    } catch (error) {
+        console.error("Something went wrong");
+    }
+}

@@ -18,9 +18,12 @@ async function loadMedia() {
     }
 
     data.files.forEach(file => {
-        const thumbnail = file.thumbnail
-            ? `${API.upload}/${file.thumbnail}`
-            : "../assets/placeholder.png";
+        let thumbnail = "";
+        if(file.type == "audio/mpeg" || file.type == "audio/mp3" || file.type == "audio/wav" || file.type == "audio/ogg"){
+            thumbnail = "../assets/audio-placeholder.jpg";
+        }else{
+            thumbnail = file.thumbnail ? `${API.upload}/${file.thumbnail}` : "../assets/placeholder.jpg";
+        }
 
         const item = document.createElement("div");
         item.className = "item";

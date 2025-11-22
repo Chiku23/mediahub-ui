@@ -33,7 +33,7 @@ async function login(){
             errorBox.innerHTML = data.error || "Invalid credentials.";
         }
     } catch (error) {
-        errorBox.innerHTML = 'Something went wrongkkkkk !';
+        errorBox.innerHTML = 'Something went wrong!';
     }
 }
 

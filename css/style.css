@@ -87,3 +87,12 @@ body {
 .navbar .nav-links a:hover {
     text-decoration: underline;
 }
+.btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}

@@ -5,6 +5,8 @@
     <title>Media Details – MediaHUB</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/media.css">
+    <script src="../lib/tailwind.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 </head>
 
 <body onload="loadDetails()">
@@ -22,15 +24,77 @@
     <h2>Media Details</h2>
     
     <div id="preview" class="preview-box"></div>
-    <div id="metadata" class="meta-box"></div>
+    <div class="meta-box-wrapper">
+        <div id="metadata" class="meta-box">
+            <h3 class="heading text-xl font-bold">Details</h3>
+            <div class="details-section flex w-full">
+                <div class="details">
+                    <div class="items flex">
+                        <div class="itemName"><strong>Name:&nbsp;</strong></div>
+                        <div id="originalName">filename</div>
+                        <span id="editName" class="btn w-[40px] h-[20px] text-sm p-0 text-center ms-2">edit</span>
+                    </div>
+                    <div class="items flex">
+                        <div class="itemName"><strong>Size:&nbsp;</strong></div>
+                        <div id="size">0KB</div>
+                    </div>
+                    <div class="items flex">
+                        <div class="itemName"><strong>Uploded On:&nbsp;</strong></div>
+                        <div id="createdAt">0KB</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <button class="back-btn" onclick="window.history.back()">Back</button>
-    <button class="btn" onclick="regenerateThumbnail()">Refresh Thumbnail</button>
+    <div class="action-group">
+        <div class="group-half">
+            <button class="back-btn" onclick="window.history.back()">Back</button>
+            <button class="btn" onclick="regenerateThumbnail()">Refresh Thumbnail</button>
+
+        </div>
+        <div class="group-half delete-group">
+            <button class="btn-danger" onclick="deleteFile()">Delete</button>
+        </div>
+    </div>
 </div>
 
+<!-- Delete Success Modal -->
+<div id="delete-modal" class="modal-overlay">
+    <div class="modal-box">
+        <h2>File Deleted</h2>
+        <p>Your media file has been removed successfully.</p>
+
+        <button class="modal-btn" onclick="closeDeleteModal()">
+            OK
+        </button>
+    </div>
+</div>
+
+<!-- Error Modal -->
+<div id="error-modal" class="error-modal-overlay">
+    <div class="modal-box" id="errorModalBox">
+        <h2>Error</h2>
+        <p id="modal-error-msg">Something went wrong.</p>
+
+        <button class="modal-btn error-modal-btn" onclick="closeErrorModal()">
+            OK
+        </button>
+    </div>
+</div>
+
+<!-- Edit Success Modal -->
+<div id="edit-modal" class="modal-overlay">
+    <div class="modal-box">
+        <h2>Edit</h2>
+        <input type="text" class="px-3 py-2 m-2 border" name="editInput" id="editInput" placeholder="Edit the name">
+        <button class="modal-btn" onclick="saveMediaName()"> SAVE </button>
+    </div>
+</div>
 <script src="../js/utils.js"></script>
 <script src="../js/media-details.js"></script>
 <script src="../js/auth.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 </body>
 </html>

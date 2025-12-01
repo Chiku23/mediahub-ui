@@ -5,6 +5,7 @@
     <title>Dashboard - MediaHUB</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="../lib/tailwind.min.js"></script>
 </head>
 
 <body onload="loadMedia()">
@@ -14,14 +15,28 @@
     <div class="nav-links">
         <span id="username"></span>
         <a href="dashboard.html">Dashboard</a>
-        <a href="upload.html">Upload</a>
         <a href="#" onclick="logout()">Logout</a>
     </div>
 </div>
 
-<h2 class="page-title">Your Media</h2>
+<div class="tabs modern-tabs">
+    <button class="tab-btn active" data-type="images">
+        🖼 Images
+    </button>
+    <button class="tab-btn" data-type="videos">
+        🎬 Videos
+    </button>
+    <button class="tab-btn" data-type="audio">
+        🎵 Audio
+    </button>
+    <button class="tab-btn" data-type="pdf">
+        📄 Documents
+    </button>
+</div>
 
-<div id="media-grid" class="grid"></div>
+<div id="media-grid" class="grid modern-grid"></div>
+
+<a title="Upload" class="uploadBtn btn p-3 bg-blue-400 flex justify-center items-center absolute rounded-full bottom-8 right-12 w-16 h-16" href="upload.html"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H12M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M17.5 21L17.5 15M17.5 15L20 17.5M17.5 15L15 17.5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></a>
 
 <script src="../js/utils.js"></script>
 <script src="../js/media.js"></script>

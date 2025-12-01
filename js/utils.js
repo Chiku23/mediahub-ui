@@ -5,7 +5,8 @@ const API = {
     upload: "http://"+IP+":4001",
     media: "http://"+IP+":4002",
     metadata: "http://"+IP+":4003",
-    thumbnail: "http://"+IP+":4004"
+    thumbnail: "http://"+IP+":4004",
+    transcoder: "http://"+IP+":4005"
 };
 
 // Helper to get JWT token

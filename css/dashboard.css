@@ -38,3 +38,80 @@
     font-size: 13px;
     color: #333;
 }
+
+/* ---------- Tabs ---------- */
+
+.modern-tabs {
+    display: flex;
+    gap: 12px;
+    margin: 25px 0;
+    padding: 0 10px;
+}
+
+.tab-btn {
+    padding: 10px 22px;
+    background: #f0f0f0;
+    border: 1px solid #dcdcdc;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.tab-btn:hover {
+    background: #e3e3e3;
+}
+
+.tab-btn.active {
+    background: #4a67ff;
+    color: white;
+    border-color: #4a67ff;
+    box-shadow: 0 2px 8px rgba(74, 103, 255, 0.4);
+}
+
+/* ---------- Media Grid ---------- */
+
+.modern-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+    padding: 10px;
+}
+
+/* ---------- Media Card ---------- */
+
+.item {
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.thumb {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+.file-name {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.uploadBtn {
+    background: transparent;
+}
